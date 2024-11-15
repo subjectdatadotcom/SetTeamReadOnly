@@ -17,7 +17,7 @@ SubjectData
 
 .EXAMPLE
 .\TeamsReadonly.ps1
-This runs the script in the current directory, processes the '131Teams.csv' file, and sets the associated SharePoint sites to ReadOnly.
+This runs the script in the current directory, processes the 'Teams.csv' file, and sets the associated SharePoint sites to ReadOnly.
 
 .EXAMPLE
 .\TeamsReadonly.ps1 -CSVFilePath "C:\Data\MyTeams.csv"
@@ -61,7 +61,7 @@ $XLloc = "$myDir\"
 
 try
 {
-    $TeamsList = import-csv ($XLloc+"131Teams.csv").ToString()
+    $TeamsList = import-csv ($XLloc+"Teams.csv").ToString()
 }
 catch
 {
