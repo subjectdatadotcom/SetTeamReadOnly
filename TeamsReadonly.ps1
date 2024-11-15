@@ -89,21 +89,8 @@ if($TeamsList.Count -gt 0)
 
             $currentTeam = Get-Team -GroupId $Team.'GroupId'
 
-            #$teamGroupId = $varNewTeam.GroupId
-        
-            #Run a Get-UnifiedGroup off of the Teams DisplayNames
-
-            # $associatedTeam = Get-UnifiedGroup | Where-Object { $_.SharePointSiteUrl -eq "https://tradercorporation.sharepoint.com/sites/CMS-CIBC-2023RFPTeam"}
-            # $associatedTeam.DisplayName
-
             $sites = (Get-UnifiedGroup  $currentTeam.DisplayName).SharePointSiteUrl
             
-            #Loop through the Sharepoint Sites Displaying Title & Lockstate
-
-            #foreach ($site in $sites) { Get-SPOSite  $site | select Title, Lockstate}
-
-            #Loop through the Sharepoint Sites setting the Lockstate to ReadOnly
-
             foreach ($site in $sites) 
             { 
                 Write-Host "Setting site readonly $($site)" -ForegroundColor Yellow
