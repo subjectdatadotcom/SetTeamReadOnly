@@ -77,7 +77,7 @@ Connect-MicrosoftTeams
 
 Connect-ExchangeOnline
 
-Connect-SPOService -url "https://coxautoinc-admin.sharepoint.com"
+Connect-SPOService -url "https://m365x84490777-admin.sharepoint.com"
 
 if($TeamsList.Count -gt 0)
 {
